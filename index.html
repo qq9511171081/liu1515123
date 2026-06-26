@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Whack A Mole Pro V2</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== 背景天空 ===== -->
+<div class="sky">
+  <div class="cloud cloud1"></div>
+  <div class="cloud cloud2"></div>
+  <div class="cloud cloud3"></div>
+</div>
+
+<!-- ===== 遊戲主體 ===== -->
+<div class="game">
+
+<h1>🐹 打地鼠大作戰 V2</h1>
+
+<!-- ===== 資訊列 ===== -->
+<div class="top">
+
+  <div class="card">
+    <p>分數</p>
+    <span id="score">0</span>
+  </div>
+
+  <div class="card">
+    <p>最高分</p>
+    <span id="highScore">0</span>
+  </div>
+
+  <div class="card">
+    <p>剩餘時間</p>
+    <span id="time">30</span>
+  </div>
+
+</div>
+
+<!-- ===== 開始按鈕 ===== -->
+<button id="startBtn">開始遊戲</button>
+
+<!-- ===== 遊戲盤面 ===== -->
+<div class="board">
+
+  <div class="hole" data-id="0"><div class="mole"></div></div>
+  <div class="hole" data-id="1"><div class="mole"></div></div>
+  <div class="hole" data-id="2"><div class="mole"></div></div>
+
+  <div class="hole" data-id="3"><div class="mole"></div></div>
+  <div class="hole" data-id="4"><div class="mole"></div></div>
+  <div class="hole" data-id="5"><div class="mole"></div></div>
+
+  <div class="hole" data-id="6"><div class="mole"></div></div>
+  <div class="hole" data-id="7"><div class="mole"></div></div>
+  <div class="hole" data-id="8"><div class="mole"></div></div>
+
+</div>
+
+</div>
+
+<!-- ===== 規則畫面 ===== -->
+<div id="rulePopup" class="popup">
+  <h2>🎮 遊戲規則</h2>
+
+  <p>🐹 普通地鼠：+1</p>
+  <p>👑 黃金地鼠：+3</p>
+  <p>💣 炸彈：-2</p>
+
+  <br>
+
+  <button id="ruleStart">開始挑戰</button>
+</div>
+
+<!-- ===== 倒數 ===== -->
+<div id="countdown" class="countdown hidden">3</div>
+
+<!-- ===== 遊戲結束 ===== -->
+<div id="popup" class="popup hidden">
+
+  <h2>🎮 遊戲結束</h2>
+
+  <p>你的分數：<span id="finalScore"></span></p>
+
+  <button id="restartBtn">再玩一次</button>
+
+</div>
+
+<!-- ===== 音效 ===== -->
+<audio id="hitSound" src="assets/audio/hit.mp3"></audio>
+<audio id="goldSound" src="assets/audio/gold.mp3"></audio>
+<audio id="bombSound" src="assets/audio/bomb.mp3"></audio>
+<audio id="countSound" src="assets/audio/countdown.mp3"></audio>
+<audio id="goSound" src="assets/audio/go.mp3"></audio>
+<audio id="gameoverSound" src="assets/audio/gameover.mp3"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
